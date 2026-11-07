@@ -1,0 +1,100 @@
+{
+  "contracts": {
+    "task-home": {
+      "checks": [
+        "npm run build (a pinned build, no network)",
+        "python tests/site_view.py && python -m unittest discover -s tests (the frozen tests)",
+        "node tests/browser/qa.mjs (phone and desktop, axe, the quality floors)"
+      ],
+      "evaluator": {
+        "criteria": [
+          "design",
+          "originality",
+          "depth",
+          "craft",
+          "functionality"
+        ],
+        "hiddenCategories": 6,
+        "threshold": 7
+      },
+      "features": [
+        {
+          "done": "P1 adds a capability, incident, control or dual-use item with its type, status, owner, date and source, and it is saved on the device and appears in the ledger. (on `index`, working offline)",
+          "id": "M1",
+          "title": "Record an evidence item"
+        },
+        {
+          "done": "P1 filters the ledger by status (ready / in progress / needs work) or by type (capability / incident / control / dual-use) and sees only the matching items. (on `index`, working offline)",
+          "id": "M2",
+          "title": "Filter the ledger"
+        },
+        {
+          "done": "P1 exports the filtered items as a single on-device summary (a downloadable file) to hand to a customer or auditor. (on `index`, working offline)",
+          "id": "M3",
+          "title": "Export a summary packet"
+        },
+        {
+          "done": "P2 changes an item's status as work progresses, so the ledger reflects the current state of each capability. (on `index`, working offline)",
+          "id": "M4",
+          "title": "Update an item's status"
+        },
+        {
+          "done": "P3 selects a control and sees every evidence item tied to it with its source and date, ready to hand over as a complete packet. (on `index`, working offline)",
+          "id": "M5",
+          "title": "Pull items by control"
+        }
+      ],
+      "task": "task-home",
+      "title": "Design direction: home page and shared style"
+    }
+  },
+  "features": [
+    {
+      "id": "M1",
+      "notes": "Built on the home page: its own page is beyond the page budget.",
+      "outcome": "P1 adds a capability, incident, control or dual-use item with its type, status, owner, date and source, and it is saved on the device and appears in the ledger.",
+      "page": "index",
+      "passes": false,
+      "status": "in-progress",
+      "title": "Record an evidence item"
+    },
+    {
+      "id": "M2",
+      "notes": "Built on the home page: its own page is beyond the page budget.",
+      "outcome": "P1 filters the ledger by status (ready / in progress / needs work) or by type (capability / incident / control / dual-use) and sees only the matching items.",
+      "page": "index",
+      "passes": false,
+      "status": "in-progress",
+      "title": "Filter the ledger"
+    },
+    {
+      "id": "M3",
+      "notes": "Built on the home page: its own page is beyond the page budget.",
+      "outcome": "P1 exports the filtered items as a single on-device summary (a downloadable file) to hand to a customer or auditor.",
+      "page": "index",
+      "passes": false,
+      "status": "in-progress",
+      "title": "Export a summary packet"
+    },
+    {
+      "id": "M4",
+      "notes": "Built on the home page: its own page is beyond the page budget.",
+      "outcome": "P2 changes an item's status as work progresses, so the ledger reflects the current state of each capability.",
+      "page": "index",
+      "passes": false,
+      "status": "in-progress",
+      "title": "Update an item's status"
+    },
+    {
+      "id": "M5",
+      "notes": "Built on the home page: its own page is beyond the page budget.",
+      "outcome": "P3 selects a control and sees every evidence item tied to it with its source and date, ready to hand over as a complete packet.",
+      "page": "index",
+      "passes": false,
+      "status": "in-progress",
+      "title": "Pull items by control"
+    }
+  ],
+  "rules": "Agents change a feature's status and notes only, with update_plan; passes is set by trusted checks once the feature's task merged on green CI and a passing evaluation.",
+  "schema": "crew.plan@1"
+}
