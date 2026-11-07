@@ -1,28 +1,27 @@
-/* Design tokens: the design system writes this file (from brand/ and
-   docs/design/), and every colour, size, space, radius and duration the pages
-   use comes from here. The template's defaults stand until it does. */
 :root {
   color-scheme: light;
-  --color-ink: #16181d;
-  --color-paper: #f7f5f0;
-  --color-surface: #ffffff;
-  --color-muted: #4d5360;
-  --color-line: #d9d5cb;
-  --color-accent: #0b5cad;
+  --color-ink: #1b1a17;
+  --color-paper: #f4f1ea;
+  --color-surface: #fbfaf6;
+  --color-muted: #5c584f;
+  --color-line: #d8d2c4;
+  --color-accent: #a6430f;
   --color-accent-ink: #ffffff;
-  --color-focus: #0b5cad;
-  --color-success: #1d6b3a;
+  --color-focus: #1f4e79;
+  --color-success: #2e6b3a;
   --color-warning: #8a5a00;
-  --color-danger: #a8241e;
-  --font-display: "Space Grotesk Variable", system-ui, sans-serif;
-  --font-body: "IBM Plex Sans Variable", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
-  --text-sm: clamp(0.875rem, 0.85rem + 0.1vw, 0.9375rem);
-  --text-base: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);
-  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);
-  --text-xl: clamp(1.375rem, 1.2rem + 0.8vw, 1.875rem);
-  --text-2xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.75rem);
-  --text-3xl: clamp(2.25rem, 1.6rem + 3vw, 4.5rem);
+  --color-danger: #a3231b;
+  --font-display: "Bricolage Grotesque Variable", sans-serif;
+  --font-body: "IBM Plex Sans Variable", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --text-xs: clamp(0.75rem, 0.75rem + 0vw, 0.75rem);
+  --text-sm: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  --text-base: clamp(1rem, 1rem + 0vw, 1rem);
+  --text-lg: clamp(1.125rem, 1.125rem + 0vw, 1.125rem);
+  --text-xl: clamp(1.375rem, 1.375rem + 0vw, 1.375rem);
+  --text-2xl: clamp(1.75rem, 1.75rem + 0vw, 1.75rem);
+  --text-3xl: clamp(2.25rem, 2.25rem + 0vw, 2.25rem);
+  --text-4xl: clamp(3rem, 3rem + 0vw, 3rem);
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -30,20 +29,24 @@
   --space-5: 1.5rem;
   --space-6: 2rem;
   --space-7: 3rem;
-  --space-8: 5rem;
-  --radius-sm: 4px;
-  --radius-md: 10px;
-  --radius-lg: 20px;
-  --shadow-1: 0 1px 2px rgb(22 24 29 / 8%);
-  --shadow-2: 0 8px 24px rgb(22 24 29 / 12%);
-  --motion-instant: 120ms;
-  --motion-quick: 200ms;
-  --motion-base: 360ms;
-  --motion-slow: 640ms;
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --space-8: 4rem;
+  --radius-tag: 2px;
+  --radius-field: 4px;
+  --radius-panel: 8px;
+  --radius-stamp: 12px;
+  --shadow-rest: 0 0px 0px rgb(27 26 23 / 0%);
+  --shadow-raised: 0 2px 8px rgb(27 26 23 / 8%);
+  --shadow-stamped: 0 4px 16px rgb(27 26 23 / 12%);
+  --motion-stamp: 180ms;
+  --motion-settle: 240ms;
+  --motion-ledger: 360ms;
+  --motion-reveal: 520ms;
+  --motion-handoff: 720ms;
+  --ease-press: cubic-bezier(0.2, 0, 0.8, 1);
+  --ease-slide: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-stamp-in: cubic-bezier(0.16, 1, 0.3, 1);
   --reveal-step: 90ms;
-  --content-max: 75rem;
+  --content-max: 70rem;
   --measure: 68ch;
   --target-min: 44px;
 }
@@ -51,16 +54,16 @@
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --color-ink: #eceae4;
-    --color-paper: #121419;
-    --color-surface: #1b1e25;
-    --color-muted: #b3b7c0;
-    --color-line: #343944;
-    --color-accent: #7ab4f5;
-    --color-accent-ink: #0b1020;
-    --color-focus: #7ab4f5;
-    --color-success: #7fd19b;
-    --color-warning: #f0c060;
-    --color-danger: #ff9a92;
+    --color-ink: #ede9df;
+    --color-paper: #16150f;
+    --color-surface: #211f18;
+    --color-muted: #a6a093;
+    --color-line: #3a372e;
+    --color-accent: #e8793a;
+    --color-accent-ink: #1b1a17;
+    --color-focus: #8fb6de;
+    --color-success: #7cc08a;
+    --color-warning: #e0a94e;
+    --color-danger: #e57a70;
   }
 }
